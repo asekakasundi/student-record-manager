@@ -12,6 +12,9 @@ public class Main {
         viewStudents();
 
         deleteStudent("Alice");
+
+        countStudents();
+
     }
 
     static void addStudent(String name) {
@@ -30,5 +33,10 @@ public class Main {
         students.remove(name);
         System.out.println(name + " removed.");
     }
+
+    static void countStudents() {
+        System.out.println("Total students: " + students.size());
+    }
+
 
 }
