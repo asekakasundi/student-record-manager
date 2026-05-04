@@ -18,6 +18,9 @@ public class Main {
         searchStudent("Alice");
         searchStudent("Bob");
 
+        updateStudent("Bob","Bobby");
+        viewStudents();
+
     }
 
     static void addStudent(String name) {
@@ -55,9 +58,21 @@ public class Main {
         if (!found) {
             System.out.println("Student not found");
         }
-
-        }
+    }
     
+
+    static void updateStudent(String name, String newName){
+        for (int i = 0; i < students.size(); i++) {
+
+            if (students.get(i).equalsIgnoreCase(name)) {
+                students.set(i, newName);
+                System.out.println("Student updated successfully.");
+                return;
+        }
+    }
+
+    System.out.println("Student not found.");
+    }
 
 
 }
