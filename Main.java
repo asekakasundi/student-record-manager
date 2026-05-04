@@ -8,11 +8,20 @@ public class Main {
 
         addStudent("Alice");
         addStudent("Bob");
+
+        viewStudents();
     }
 
     static void addStudent(String name) {
         students.add(name);
         System.out.println(name + " added.");
+    }
+
+    static void viewStudents() {
+        System.out.println("Student List:");
+        for (String s : students) {
+            System.out.println(s);
+        }
     }
 
 }
